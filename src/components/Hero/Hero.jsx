@@ -23,7 +23,7 @@ const Hero = () => {
         <button className="cta"
   onClick={() => window.location.href = "tel:+13477599127"}>
    <img src={phone} alt="cart icon" className="cart-icon" />
-    +1 347 759-9127
+    Contact Us
 </button>
 
       </div>
