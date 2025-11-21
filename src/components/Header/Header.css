@@ -1,0 +1,215 @@
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  height: 90px;
+}
+
+/* Logo */
+.logo-img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Desktop nav */
+.nav-links {
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.nav-links a:hover, .nav-links a.active { color: #ff6600; }
+
+.cart-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: middle;
+  transition: filter 0.3s ease;
+}
+
+/* Desktop button */
+.order-btn {
+  background: #ff6600;
+  color: white;
+  border: 2px solid white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.order-btn:hover {
+  color: white;
+  border-color: transparent;
+  background: radial-gradient(
+    circle at center,
+    #20d374 0%,
+    #1cba6a 5%,
+    #15925b 18%,
+    #128154 29%,
+    #10744f 39%,
+    #0d6148 57%,
+    #0a5443 73%,
+    #094d40 83%,
+    #08413b 100%
+  );
+}
+
+/* === PERFECT HAMBURGER / X === */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 5000;
+}
+
+.menu-toggle span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.35s ease-in-out;
+}
+
+.menu-toggle span:nth-child(1) { top: 0; }
+.menu-toggle span:nth-child(2) { top: 10px; }
+.menu-toggle span:nth-child(3) { top: 20px; }
+
+.menu-toggle.open span:nth-child(1) { transform: rotate(45deg); top: 10px; }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: rotate(-45deg); top: 10px; }
+
+.menu-toggle:hover span { background-color: #ff6600; }
+
+/* Menu + overlay for mobile */
+@media (max-width: 900px) {
+  .nav-links, .header-right { display: none !important; }
+
+  .menu-toggle { display: block; }
+
+  /* Fix logo padding on mobile */
+  .header {
+    padding-left: 16px; /* ✅ reduced left padding */
+    padding-right: 16px; /* optional: match right side */
+  }
+
+  .logo-img {
+    padding-left: 0; /* remove any internal logo padding */
+  }
+
+  .menu-overlay {
+    display: none;
+  }
+  .menu-overlay.active {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(2px);
+    z-index: 300;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 4.5rem;
+    right: 1rem;
+    width: 220px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 1.25rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    transform: translateX(150%);
+    transition: all 0.35s cubic-bezier(.2,.9,.2,1);
+    z-index: 400;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+  }
+
+  .mobile-nav.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.25s ease;
+  }
+  .mobile-nav a:hover { color: #ff6600; }
+
+  .mobile-nav .order-btn {
+    margin-top: 1.25rem;
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
+.mobile-nav .order-btn {
+  background: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  align-self: stretch;
+  text-align: center;
+  transition: background 0.25s ease;
+}
+
+.mobile-nav .order-btn:hover {
+  color: white;
+  border-color: transparent;
+  background: radial-gradient(
+    circle at center,
+    #20d374 0%,
+    #1cba6a 5%,
+    #15925b 18%,
+    #128154 29%,
+    #10744f 39%,
+    #0d6148 57%,
+    #0a5443 73%,
+    #094d40 83%,
+    #08413b 100%
+  );
+}
+
+/* Desktop only safety */
+@media (min-width: 901px) {
+  .mobile-nav, .menu-overlay { display: none !important; }
+}

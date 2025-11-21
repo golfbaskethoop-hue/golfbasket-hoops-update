@@ -1,0 +1,165 @@
+/* PAGE WRAPPER */
+.blog-wrapper {
+  width: 100%;
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8fafc;
+}
+
+/* HEADING */
+.blog-heading {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1e1e1e;
+  margin-bottom: 10px;
+}
+
+.blog-subtitle {
+  font-size: 20px;
+  color: #6b6b6b;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+}
+
+/* GRID */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* CARD */
+.blog-card {
+  background: white;
+  border-radius: 28px;
+  padding-bottom: 30px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 6px 30px;
+  transition: 0.25s ease;
+  text-align: left;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+}
+
+/* IMAGE */
+.img-wrapper {
+  padding: 16px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.blog-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+/* CATEGORY TAG */
+.blog-category {
+  display: inline-block;
+  margin: 12px 22px;
+  font-size: 14px;
+  color: #5670ff;
+  background: #e8ebff;
+  padding: 6px 14px;
+  border-radius: 8px;
+}
+
+/* TITLE */
+.blog-title {
+  font-size: 100px;      /* Perfect readable size */
+  font-weight: 700;
+  line-height: 1.3;
+  padding: 0 22px;      /* IMPORTANT – fixes oversizing */
+  color: #1e1e1e;
+  margin-bottom: 14px;
+}
+.blog-card .blog-title {
+  font-size: 28px;       /* Desktop size */
+  font-weight: 700;
+  line-height: 1.35;
+  padding: 0 22px;
+  color: #1e1e1e;
+  margin-bottom: 14px;
+}
+/* FOOTER */
+.blog-footer {
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  gap: 12px;
+}
+
+.author-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+.author-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.blog-date {
+  margin-left: auto;
+  font-size: 14px;
+  color: #777;
+}
+
+
+/* ========================================= */
+/* 📱 MOBILE RESPONSIVE FIXES */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  .blog-heading {
+    font-size: 36px;
+  }
+
+  .blog-subtitle {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .blog-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .blog-card {
+    max-width: 100%;
+  }
+
+  .blog-img {
+    height: 220px;
+  }
+
+  .blog-card .blog-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-heading {
+    font-size: 30px;
+  }
+
+  .blog-card .blog-title {
+    font-size: 18px !important;
+  }
+
+  .blog-subtitle {
+    font-size: 14px;
+  }
+
+  .blog-img {
+    height: 200px;
+  }
+}

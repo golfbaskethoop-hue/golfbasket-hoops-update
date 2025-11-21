@@ -1,0 +1,129 @@
+.hero {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+}
+.cart-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+  filter: brightness(0) invert(1); /* makes icon white */
+  transition: filter 0.3s ease;
+}
+
+.cta:hover .cart-icon {
+  filter: brightness(1) invert(0);
+}
+
+
+
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin-left: 5.5rem;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.cta {
+  background-color: #ff6600;
+  color: white;
+  border: 2px solid white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+
+.cta:hover {
+  color: white;
+  border-color: transparent;
+  background: radial-gradient(
+    circle at center,
+    #20d374 0%,
+    #1cba6a 5%,
+    #15925b 18%,
+    #128154 29%,
+    #10744f 39%,
+    #0d6148 57%,
+    #0a5443 73%,
+    #094d40 83%,
+    #08413b 100%
+  );
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    background-size: cover; /* keeps full image */
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center; /* ⬅ centers vertically */
+    justify-content: flex-start;
+    padding: 0 1.5rem;
+  }
+
+  .overlay {
+    display: flex;
+    align-items: center; /* ⬅ also centers overlay */
+    justify-content: flex-start;
+    padding: 0 1.5rem;
+  }
+
+  .hero-content {
+    margin-left: 0.5rem;
+    max-width: 90%;
+    text-align: left;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+  

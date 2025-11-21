@@ -1,0 +1,110 @@
+.our-story {
+  position: relative;
+  width: 100%;
+  background-color: #f5f5f5;
+  background-repeat: no-repeat;
+  background-size: 550px auto;
+  background-position: 0% 60%;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.story-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.story-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.story-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* instead of center */
+  gap: 200px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.story-text {
+  flex: 1.4;
+  max-width: 640px;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600;
+  color: #333333;
+  text-align: left;
+  margin-left: 20px; /* smaller push to right */
+}
+
+.highlight {
+  color: #32a852;
+  font-weight: 700;
+}
+
+.story-video {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -150px;  
+}
+.ourstory-video {
+  display: block;
+  margin: 0 auto;
+  width: 398px;
+  height: 394px;
+  border-radius: 12px;
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));
+  object-fit: cover;
+}
+
+
+
+@media (max-width: 950px) {
+  .story-content {
+    flex-direction: column;
+    align-items: center; /* ✅ Centers video and text */
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .story-text {
+    text-align: left;
+    font-size: 20px;
+    line-height: 32px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .story-video {
+    margin-left: 0; /* ✅ Removes desktop offset */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* ✅ Centers video horizontally */
+  }
+
+  .video-element {
+    width: 90%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .our-story {
+    background-size: 400px auto;
+    background-position: center top;
+  }
+}

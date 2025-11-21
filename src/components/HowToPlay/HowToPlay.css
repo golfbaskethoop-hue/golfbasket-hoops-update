@@ -1,0 +1,248 @@
+/* 🎯 HOW TO PLAY SECTION */
+.how-to-play {
+  position: relative;
+  background: 
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f7f9fb 30%,
+      #e3ebf2 100%
+    ),
+    url("../../assets/HowToPlay-Bg.png") center center / cover no-repeat;
+  background-blend-mode: overlay;
+  padding: 100px 20px;
+  text-align: center;
+  overflow: visible;
+  z-index: 0;
+}
+
+.how-to-play::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.2),
+      transparent 70%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.15),
+      transparent 70%
+    ),
+    rgba(255, 255, 255, 0.05);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.how-to-play-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.how-to-play-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.how-to-play-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 60px;
+}
+
+/* ✅ Cards row - fixed shadow clipping */
+.how-to-play-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: nowrap;
+  overflow-x: visible; /* ✅ allow hover shadows to show */
+  padding-bottom: 20px;
+  scrollbar-width: none;
+  position: relative;
+  z-index: 1;
+}
+.how-to-play-cards::-webkit-scrollbar {
+  display: none;
+}
+
+/* ✨ Glassy Card */
+.how-to-play-card {
+  position: relative;
+  width: 300px;
+  height: 320px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px) saturate(180%) brightness(115%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%) brightness(115%);
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    inset 0 0 12px rgba(255, 255, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 25px 15px 30px;
+  gap: 12px;
+  text-align: center;
+  overflow: visible;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  z-index: 2;
+}
+.how-to-play-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+.how-to-play-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  pointer-events: none;
+  z-index: 1;
+}
+.how-to-play-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* ✅ smoother shadow */
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.card-img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin-top: 30px;
+  z-index: 2;
+}
+.card-number {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #ff6b00;
+  color: #ff6b00;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 3;
+}
+.card-text {
+  max-width: 220px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: #444;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  z-index: 2;
+}
+
+/* ✅ Watch Demo Button */
+.watch-demo-btn {
+  margin-top: 60px;
+  background: #ff6600;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.watch-demo-btn:hover {
+  background: radial-gradient(
+    circle at center,
+    #20d374 0%,
+    #1cba6a 10%,
+    #15925b 25%,
+    #128154 40%,
+    #10744f 55%,
+    #0d6148 70%,
+    #0a5443 85%,
+    #094d40 100%
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(32, 211, 116, 0.5);
+}
+
+/* 🎬 Play Icon inside Button */
+.play-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.watch-demo-btn:hover .play-icon {
+  transform: scale(1.1);
+}
+
+/* 📱 Mobile tweaks */
+@media (max-width: 950px) {
+  .how-to-play-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    justify-items: center;
+    overflow-x: auto; /* ✅ enable scroll only on mobile */
+    overflow-y: visible;
+    padding-bottom: 20px;
+  }
+
+  .how-to-play-card {
+    width: 100%;
+    max-width: 150px;
+    height: 250px;
+  }
+
+  .card-img {
+    width: 90px;
+    height: 90px;
+    margin-top: 20px;
+  }
+
+  .card-text {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 120px;
+  }
+}

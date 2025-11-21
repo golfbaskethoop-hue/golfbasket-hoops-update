@@ -1,0 +1,106 @@
+/* ===============================
+   GLOBAL
+================================*/
+html, body {
+  background: #ffffff !important;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* ===============================
+   PAGE HEADER
+================================*/
+.section-header {
+  padding-top: 70px;
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+}
+
+.section-header h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.section-header p {
+  font-size: 15px;
+  color: #666;
+}
+
+/* ===============================
+   ARTICLE WRAPPER (Matches second screenshot)
+================================*/
+.blog-article-container {
+  max-width: 760px;       /* ✔ Same width as second layout */
+  margin: 0 auto;         /* ✔ Centered */
+  padding: 0 20px;        /* ✔ Same inside padding */
+}
+
+/* ===============================
+   TITLE
+================================*/
+.blog-title {
+  font-size: 32px;        /* ✔ Slightly smaller like second screenshot */
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 14px;
+  text-align: left;
+  color: #111;
+}
+
+/* ===============================
+   META
+================================*/
+.blog-meta {
+  font-size: 14px;
+  color: #757575;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===============================
+   HERO IMAGE
+================================*/
+.blog-hero-wrapper {
+  margin: 20px 0 30px 0;   /* ✔ Tighter spacing like screenshot 2 */
+}
+
+.blog-hero-image {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0 !important;
+}
+
+/* ===============================
+   CONTENT
+================================*/
+.blog-content p {
+  font-size: 17px;        /* ✔ Same size as screenshot 2 */
+  line-height: 1.7;
+  color: #222;
+  margin-bottom: 26px;
+  text-align: left;
+}
+
+.blog-content h2,
+.blog-content h3 {
+  margin: 42px 0 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #111;
+  text-align: left;
+}
+
+.blog-content img {
+  width: 100%;
+  margin: 30px 0;
+  display: block;
+  border-radius: 0 !important;
+}
