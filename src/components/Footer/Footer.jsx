@@ -8,8 +8,7 @@ import Phone from '../../assets/phone.svg';
 
 import Fb from '../../assets/Fb.svg';
 import Insta from '../../assets/Insta.svg';
-import X from '../../assets/X.svg';
-import Linkedin from '../../assets/linkdin.svg';
+
 import Discord from '../../assets/discord.svg';
 
 export default function Footer() {
@@ -64,8 +63,6 @@ export default function Footer() {
           <div className="social-icons">
             <a href="https://www.facebook.com/GolfbasketHoops"><img src={Fb} alt="Facebook" /></a>
             <a href="https://www.instagram.com/golfbaskethoopsofficial"><img src={Insta} alt="Instagram" /></a>
-            <a href="https://www.golfbasketsplay.com"><img src={X} alt="Twitter" /></a>
-            <a href="#"><img src={Linkedin} alt="LinkedIn" /></a>
             <a href="https://www.tiktok.com/@golfbaskethoopsofficial"><img src={Discord} alt="Discord" /></a>
           </div>
 

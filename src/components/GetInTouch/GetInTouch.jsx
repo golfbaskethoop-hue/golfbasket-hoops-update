@@ -7,8 +7,8 @@ import envelope from "../../assets/Envlope.svg";
 import clock from "../../assets/clock.svg";
 import Fb from '../../assets/Fb.svg';
 import Insta from '../../assets/Insta.svg';
-import X from '../../assets/X.svg';
-import Linkedin from '../../assets/linkdin.svg';
+
+  
 import Discord from '../../assets/discord.svg';
 
 export default function GetInTouch() {
@@ -64,8 +64,6 @@ export default function GetInTouch() {
           <div className="social-icons">
             <a href="https://www.facebook.com/GolfbasketHoops" className="facebook"><img src={Fb} alt="Facebook" /></a>
             <a href="https://www.instagram.com/golfbaskethoopsofficial" className="instagram"><img src={Insta} alt="Instagram" /></a>
-            <a href="https://www.golfbasketsplay.com" className="twitter"><img src={X} alt="Twitter" /></a>
-            <a href="#" className="linkedin"><img src={Linkedin} alt="LinkedIn" /></a>
             <a href="https://www.tiktok.com/@golfbaskethoopsofficial" className="discord"><img src={Discord} alt="Discord" /></a>
           </div>
         </div>
