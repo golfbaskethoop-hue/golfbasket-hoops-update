@@ -49,10 +49,10 @@ export default function HowToPlay() {
         </div>
 
         {/* ✅ Updated Watch Demo Button */}
-        <button className="watch-demo-btn">
+        {/* <button className="watch-demo-btn">
           <img src={PlayIcon} alt="Play Demo" className="play-icon" />
           Watch Demo
-        </button>
+        </button> */}
       </div>
     </section>
   );
